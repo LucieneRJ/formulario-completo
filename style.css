@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root{
+  --bg-color: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  --bg-container: #fafafa;
+  --bg-header: #eee;
+  --bg-button: #fc00ff;
+  --corTextoButton: #fff;
+  --corIconSuccess: #2ecc71;
+  --corIconError: #e74c3c;
+  --tamFonte: ;
+  --fontTipo: "Poppins", sans-serif;
+
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--bg-container);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  background-color: var(--bg-header);
+  padding: 20px;
+}
+
+.form {
+  padding: 20px;
+}
+
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  display: block;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px;
+}
+
+.form-control i {
+  position: absolute;
+  top: 45px;
+  right: 10px;
+  visibility: hidden /*essa propriedade será alterada pelo JS*/
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form button {
+  background-color: var(--bg-button);
+  border: 2px solid var(--bg-button);
+  color: var(--corTextoButton);
+  font-size: 14px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Error and Success */
+.form-control.success input {
+  border-color: var(--corIconSuccess);
+}
+
+.form-control.error input {
+  border-color: var(--corIconError);
+}
+
+.form-control.success i.fa-check-circle {
+  color: var(--corIconSuccess);
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: var(--corIconError);
+  visibility: visible;
+}
+
+.form-control.error small {
+  visibility: visible;
+  color: var(--corIconError);
+}
